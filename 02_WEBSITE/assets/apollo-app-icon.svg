@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Apollo">
+  <rect width="512" height="512" rx="92" fill="#f7f3e8"/>
+  <g>
+    <circle cx="215" cy="230" r="104" fill="#142b40"/>
+    <circle cx="215" cy="230" r="92" fill="#f7f3e8"/>
+    <path d="M145 191a96 96 0 0 1 150 88a96 96 0 0 1-150-88Z" fill="#efb141"/>
+    <path d="M42 325C155 194 337 184 472 242l-5 14C333 202 164 211 55 337Z" fill="#087d9b"/>
+    <path d="M68 359c119-108 278-118 399-63l-5 13C342 259 193 268 79 370Z" fill="#2c9e92"/>
+    <path d="M118 389c96-73 220-83 319-45l-4 12c-96-33-212-23-306 44Z" fill="#edb644"/>
+  </g>
+</svg>

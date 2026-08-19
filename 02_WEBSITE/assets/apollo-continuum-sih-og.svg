@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Apollo Continuum SIH Intelligent Soil">
+  <rect width="1200" height="630" fill="#f5f3eb"/>
+  <rect x="0" y="0" width="1200" height="16" fill="#087d9b"/>
+  <rect x="0" y="614" width="1200" height="16" fill="#efb141"/>
+  <g transform="translate(72 62) scale(.72)">
+    <circle cx="55" cy="49" r="27" fill="#142b40"/>
+    <circle cx="55" cy="49" r="24" fill="#f5f3eb"/>
+    <path d="M37 39a25 25 0 0 1 39 23a25 25 0 0 1-39-23Z" fill="#efb141"/>
+    <path d="M8 72C43 33 99 29 148 48l-1 4C99 35 47 39 11 76Z" fill="#087d9b"/>
+    <path d="M15 79C52 45 101 43 145 59l-1 4C101 49 55 51 18 83Z" fill="#2c9e92"/>
+    <path d="M30 83C61 61 105 58 137 68l-1 3c-31-8-73-5-104 15Z" fill="#edb644"/>
+  </g>
+  <text x="205" y="118" font-family="Arial, Helvetica, sans-serif" font-size="38" font-weight="700" fill="#142b40">APOLLO CONTINUUM</text>
+  <text x="74" y="205" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" letter-spacing="2" fill="#087d9b">GREENWORKS / APOLLO AGRIVERSE / SIH 2026</text>
+  <text x="70" y="305" font-family="Arial, Helvetica, sans-serif" font-size="70" font-weight="700" fill="#142b40">Intelligent Soil</text>
+  <text x="70" y="382" font-family="Arial, Helvetica, sans-serif" font-size="70" font-weight="700" fill="#142b40">Decision Workbench</text>
+  <text x="74" y="454" font-family="Arial, Helvetica, sans-serif" font-size="28" fill="#52636c">Physics-informed digital twin for explainable irrigation decisions</text>
+  <rect x="74" y="505" width="582" height="58" rx="3" fill="#0b1f3a"/>
+  <text x="100" y="542" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="700" fill="#ffffff">RAIT / D Y PATIL UNIVERSITY</text>
+  <text x="704" y="542" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" fill="#087d9b">apollocontinuum.com/sih</text>
+</svg>
