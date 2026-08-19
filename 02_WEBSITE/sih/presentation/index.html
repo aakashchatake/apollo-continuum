@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SIH 2026 - Intelligent Soil Digital Twin</title>
+  <style>
+    @page { size: 13.333in 7.5in; margin: 0; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #edf1ec; font-family: Arial, Helvetica, sans-serif; color: #132821; }
+    .slide { width: 1280px; height: 720px; position: relative; overflow: hidden; background: #f8fbf7; page-break-after: always; padding: 54px 72px; }
+    .slide:last-child { page-break-after: auto; }
+    .eyebrow { color: #39724c; font-size: 15px; font-weight: 700; letter-spacing: 1.6px; text-transform: uppercase; }
+    h1 { margin: 18px 0 16px; max-width: 840px; font-size: 54px; line-height: 1.07; letter-spacing: 0; }
+    h2 { margin: 18px 0 26px; max-width: 1050px; font-size: 41px; line-height: 1.12; letter-spacing: 0; }
+    h3 { margin: 0 0 9px; font-size: 22px; line-height: 1.15; }
+    p, li { font-size: 20px; line-height: 1.35; }
+    p { margin: 0; }
+    ul { margin: 0; padding-left: 26px; }
+    li { margin: 10px 0; }
+    .muted { color: #547063; }
+    .footer { position: absolute; left: 72px; right: 72px; bottom: 30px; display: flex; justify-content: space-between; border-top: 1px solid #cad9ca; padding-top: 11px; color: #5f7468; font-size: 13px; }
+    .brand { font-weight: 700; color: #1e4b31; }
+    .accent { color: #b55b1f; }
+    .cover { background: #f2f5ed; }
+    .cover::after { content: ""; position: absolute; right: -65px; bottom: -178px; width: 680px; height: 500px; border-radius: 50%; background: #d7e7c4; }
+    .cover::before { content: ""; position: absolute; right: 116px; bottom: 90px; width: 420px; height: 420px; border-radius: 50%; border: 2px solid #608f62; }
+    .cover .subtitle { max-width: 700px; color: #365342; font-size: 26px; line-height: 1.34; }
+    .identity { margin-top: 64px; max-width: 620px; display: block; font-size: 18px; color: #375547; line-height: 1.35; }
+    .identity span { display: block; margin-bottom: 12px; }
+    .identity strong { color: #132821; }
+    .root-zone { position: absolute; width: 430px; height: 346px; right: 88px; top: 115px; z-index: 1; }
+    .sun { position: absolute; width: 62px; height: 62px; border-radius: 50%; background: #f6b43e; top: 0; right: 55px; }
+    .plant { position: absolute; width: 10px; height: 170px; background: #3c7c4d; top: 70px; left: 210px; border-radius: 10px; transform: rotate(4deg); }
+    .leaf { position: absolute; width: 112px; height: 38px; border-radius: 100% 0 100% 0; background: #72a74f; }
+    .leaf.a { left: 105px; top: 106px; transform: rotate(-25deg); }
+    .leaf.b { left: 214px; top: 91px; transform: rotate(22deg) scaleX(-1); }
+    .soil { position: absolute; left: 0; right: 0; bottom: 0; height: 150px; background: #8a5b3f; border-top: 4px solid #547b3d; }
+    .soil:before { content: ""; position: absolute; inset: 26px 0 0; background-image: radial-gradient(#b9885d 2px, transparent 2px); background-size: 30px 24px; opacity: .65; }
+    .root { position: absolute; width: 4px; height: 146px; background: #eee6cb; border-radius: 6px; top: 200px; left: 215px; transform-origin: top; }
+    .root.r1 { transform: rotate(-24deg); height: 110px; } .root.r2 { transform: rotate(21deg); height: 120px; } .root.r3 { transform: rotate(7deg); height: 130px; }
+    .gel { position: absolute; width: 23px; height: 23px; border-radius: 50%; background: #6bb5d5; border: 2px solid #d6f3ff; top: 265px; left: 137px; box-shadow: 72px 18px 0 #6bb5d5, 150px -2px 0 #6bb5d5, 206px 45px 0 #6bb5d5; }
+    .two { display: grid; grid-template-columns: 1fr 1fr; gap: 52px; }
+    .problem-map { height: 355px; position: relative; border-left: 1px solid #bed0be; padding-left: 34px; }
+    .problem-map .mark { display: grid; grid-template-columns: 32px 1fr; gap: 16px; align-items: start; margin: 21px 0; }
+    .num { color: #f8fbf7; background: #b55b1f; width: 30px; height: 30px; border-radius: 50%; text-align: center; padding-top: 5px; font-size: 15px; font-weight: 700; }
+    .statement { max-width: 440px; font-size: 23px; line-height: 1.25; }
+    .architecture { display: grid; grid-template-columns: 185px 42px 235px 42px 200px 42px 215px; align-items: center; margin-top: 32px; }
+    .node { min-height: 142px; padding: 18px 17px; background: #eaf2e3; border-top: 6px solid #5a8c54; }
+    .node strong { display: block; font-size: 20px; margin-bottom: 9px; }
+    .node span { display: block; font-size: 15px; line-height: 1.33; color: #436152; }
+    .arrow { font-size: 32px; text-align: center; color: #b55b1f; }
+    .truth { position: absolute; left: 72px; bottom: 73px; right: 72px; border-left: 6px solid #e4a54e; padding: 13px 18px; background: #fff7e9; font-size: 19px; line-height: 1.32; }
+    .demo-grid { display: grid; grid-template-columns: 390px 1fr; gap: 56px; }
+    .steps { border-left: 3px solid #80ab6b; padding: 1px 0 1px 24px; }
+    .steps div { margin: 18px 0; font-size: 20px; }
+    .chart { height: 365px; position: relative; padding: 32px 30px 43px 52px; border-left: 2px solid #6a8a78; border-bottom: 2px solid #6a8a78; background: repeating-linear-gradient(to bottom, transparent 0 70px, #dce8dc 71px 72px); }
+    .chart-label { position: absolute; color: #5d7566; font-size: 13px; }
+    .chart-label.y { left: 8px; top: 184px; transform: rotate(-90deg); transform-origin: top left; } .chart-label.x { right: 5px; bottom: 9px; }
+    .line { position: absolute; height: 4px; transform-origin: left center; border-radius: 5px; }
+    .control { background: #b55b1f; left: 52px; top: 94px; width: 290px; transform: rotate(33deg); } .control2 { background: #b55b1f; left: 292px; top: 250px; width: 70px; transform: rotate(38deg); }
+    .hydro { background: #267a9c; left: 52px; top: 103px; width: 230px; transform: rotate(17deg); } .hydro2 { background: #267a9c; left: 272px; top: 169px; width: 94px; transform: rotate(30deg); }
+    .bio { background: #709b48; left: 52px; top: 109px; width: 205px; transform: rotate(10deg); } .bio2 { background: #709b48; left: 250px; top: 145px; width: 122px; transform: rotate(20deg); }
+    .legend { position: absolute; bottom: 4px; left: 52px; display: flex; gap: 20px; font-size: 13px; } .legend i { display: inline-block; width: 11px; height: 11px; margin-right: 6px; } .legend .c { background: #b55b1f; } .legend .h { background: #267a9c; } .legend .b { background: #709b48; }
+    .compare { display: grid; grid-template-columns: 1fr 1fr; gap: 58px; }
+    .side h3 { font-size: 30px; } .side ul { padding-left: 24px; } .side li { font-size: 20px; }
+    .callout { margin-top: 24px; padding: 20px 22px; background: #e7f0e2; border-left: 6px solid #5a8c54; font-size: 22px; line-height: 1.25; }
+    .roadmap { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 34px; }
+    .phase { min-height: 260px; padding: 22px 20px; background: #edf4e9; border-top: 6px solid #5d9661; }
+    .phase:nth-child(2) { border-color: #8ca753; background: #f2f6e8; } .phase:nth-child(3) { border-color: #d29a42; background: #f9f2e5; } .phase:nth-child(4) { border-color: #b55b1f; background: #faeee5; }
+    .phase .number { display: block; font-size: 13px; color: #58705f; letter-spacing: 1px; font-weight: 700; margin-bottom: 24px; }
+    .phase h3 { font-size: 25px; } .phase p { font-size: 18px; color: #415c4a; }
+    .roles { display: flex; gap: 16px; margin-top: 23px; } .role { flex: 1; font-size: 16px; line-height: 1.25; color: #315241; border-top: 1px solid #adc2af; padding-top: 9px; }
+  </style>
+</head>
+<body>
+  <section class="slide cover">
+    <div class="eyebrow">Smart India Hackathon 2026</div>
+    <h1>Physics-Informed Digital Twin for Intelligent Soil Systems</h1>
+    <p class="subtitle">Water-efficient precision agriculture using stimuli-responsive hydrogels and hybrid state models.</p>
+    <div class="identity"><span><strong>Ministry of Agriculture &amp; Farmers Welfare</strong></span><span>Industry Guidance: Chatake Innoworks Pvt. Ltd. - Apollo AgriVerse</span></div>
+    <div class="root-zone"><div class="sun"></div><div class="plant"></div><div class="leaf a"></div><div class="leaf b"></div><div class="root r1"></div><div class="root r2"></div><div class="root r3"></div><div class="soil"></div><div class="gel"></div></div>
+    <div class="footer"><span>Academic Guidance: Dr. Dipti Jadhav, D Y Patil</span><span class="brand">APOLLO AGRIVERSE</span></div>
+  </section>
+  <section class="slide">
+    <div class="eyebrow">01 / The Challenge</div><h2>Farmers must make irrigation decisions with incomplete visibility of the root zone.</h2>
+    <div class="two"><div class="problem-map"><div class="mark"><span class="num">1</span><span class="statement">Erratic rainfall and heat make fixed irrigation schedules unreliable.</span></div><div class="mark"><span class="num">2</span><span class="statement">Sensors can be noisy, unavailable or fail in real fields.</span></div><div class="mark"><span class="num">3</span><span class="statement">Pure AI may recommend actions that do not respect soil and crop physics.</span></div><div class="mark"><span class="num">4</span><span class="statement">Conventional soil does not actively buffer water near the roots.</span></div></div><div><h3 class="accent">What is missing?</h3><p style="font-size:31px;line-height:1.2;margin-top:16px;">A resilient, explainable recommendation - not another data screen.</p><div class="callout">The system must continue estimating field state even when a reading is uncertain, then make its confidence visible.</div></div></div>
+    <div class="footer"><span>SIH 2026 | Intelligent Soil Digital Twin</span><span>2 / 6</span></div>
+  </section>
+  <section class="slide">
+    <div class="eyebrow">02 / The Solution</div><h2>Apollo AgriVerse combines material intelligence with a physics-informed digital twin.</h2>
+    <div class="architecture"><div class="node"><strong>Field Inputs</strong><span>Crop, soil, irrigation history, weather and optional sensor readings</span></div><div class="arrow">&#8594;</div><div class="node"><strong>Four State Engines</strong><span>Mulch, soil hydrology, hydrogel behaviour and crop lifecycle</span></div><div class="arrow">&#8594;</div><div class="node"><strong>Trusted Field State</strong><span>Time-stamped root-zone condition and confidence score</span></div><div class="arrow">&#8594;</div><div class="node"><strong>Selective Neural Engine</strong><span>Forecast, anomaly detection and irrigation recommendation</span></div></div>
+    <div class="truth"><strong>Why this architecture:</strong> physics keeps the state plausible during imperfect telemetry; ML is used selectively for prediction and uncertainty rather than as a black box.</div>
+    <div class="footer"><span>SIH 2026 | Intelligent Soil Digital Twin</span><span>3 / 6</span></div>
+  </section>
+  <section class="slide">
+    <div class="eyebrow">03 / Working MVP</div><h2>The prototype demonstrates a decision, not merely a dashboard.</h2>
+    <div class="demo-grid"><div class="steps"><div><strong>1. Configure</strong><br>Crop, soil, weather scenario and treatment.</div><div><strong>2. Simulate</strong><br>Seven to fourteen days of water balance and crop demand.</div><div><strong>3. Compare</strong><br>Control, hydrogel, biochar and combined treatment.</div><div><strong>4. Recommend</strong><br>Irrigate now, delay, partial cycle or inspect a sensor.</div></div><div class="chart"><span class="chart-label y">Root-zone moisture</span><span class="chart-label x">Days</span><div class="line control"></div><div class="line control2"></div><div class="line hydro"></div><div class="line hydro2"></div><div class="line bio"></div><div class="line bio2"></div><div class="legend"><span><i class="c"></i>Control</span><span><i class="h"></i>Hydrogel</span><span><i class="b"></i>Biochar</span></div></div></div>
+    <div class="truth"><strong>Demo story:</strong> in a hot, low-rainfall scenario, the control plot reaches stress first. The system recommends a partial, timed irrigation where the modelled hydrogel buffer still holds water. <em>All displayed results are simulated MVP scenarios until field validation.</em></div>
+    <div class="footer"><span>SIH 2026 | Intelligent Soil Digital Twin</span><span>4 / 6</span></div>
+  </section>
+  <section class="slide">
+    <div class="eyebrow">04 / Novelty and Feasibility</div><h2>The innovation is a transparent hybrid decision system - not a claim that one material solves every soil problem.</h2>
+    <div class="compare"><div class="side"><h3>Feasible now</h3><ul><li>Software-first MVP using simulated and manual data.</li><li>Low-cost future hardware path: moisture, temperature, EC and one valve.</li><li>State engine works through missing data and reports confidence.</li><li>Every irrigation action shows the variables that caused it.</li></ul></div><div class="side"><h3>Test, then prove</h3><ul><li>Hydrogel: local water reservoir with finite storage and release.</li><li>Biochar: comparator for longer-term soil hydraulic and nutrient effects.</li><li>Field protocol: control, hydrogel, biochar and combined treatment.</li><li>Measure water productivity, crop response, cost and usability.</li></ul></div></div>
+    <div class="callout">Hydrogel and biochar are complementary, testable interventions. The correct answer depends on crop, soil, irrigation regime and economics.</div>
+    <div class="footer"><span>SIH 2026 | Intelligent Soil Digital Twin</span><span>5 / 6</span></div>
+  </section>
+  <section class="slide">
+    <div class="eyebrow">05 / Path to Impact</div><h2>From SIH demonstration to a field-verifiable Apollo AgriVerse module.</h2>
+    <div class="roadmap"><div class="phase"><span class="number">01 / HACKATHON</span><h3>Digital twin MVP</h3><p>Scenario engine, transparent recommendation and recorded demo.</p></div><div class="phase"><span class="number">02 / VALIDATION</span><h3>Controlled experiment</h3><p>Compare control, hydrogel, biochar and combined treatment.</p></div><div class="phase"><span class="number">03 / PILOT</span><h3>Local field proof</h3><p>Calibrate with one crop, one soil profile and agronomist review.</p></div><div class="phase"><span class="number">04 / SCALE</span><h3>Farmer workflow</h3><p>Simple advice, economics, local language and irrigation integration.</p></div></div>
+    <div class="roles"><div class="role"><strong>Priyan</strong><br>Product &amp; integration</div><div class="role"><strong>Divyanshi</strong><br>Soil &amp; material research</div><div class="role"><strong>Zidane</strong><br>State engine</div><div class="role"><strong>Rudra</strong><br>Crop &amp; weather</div><div class="role"><strong>Mubeen</strong><br>UI &amp; demo</div><div class="role"><strong>Siddhanth</strong><br>ML, QA &amp; documentation</div></div>
+    <div class="footer"><span>Make soil decisions explainable, measurable and useful in the field.</span><span class="brand">APOLLO AGRIVERSE | 6 / 6</span></div>
+  </section>
+</body>
+</html>
