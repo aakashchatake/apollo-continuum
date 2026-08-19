@@ -1,0 +1,10 @@
+<svg width="420" height="86" viewBox="0 0 420 86" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Apollo</title>
+  <desc id="desc">Apollo institutional identity wordmark</desc>
+  <circle cx="42" cy="46" r="23" fill="#F2B84B"/>
+  <circle cx="42" cy="46" r="31" stroke="#0B2537" stroke-width="2"/>
+  <path d="M14 78C53 33 107 25 159 45" stroke="#166B8F" stroke-width="3" stroke-linecap="round"/>
+  <path d="M19 88C60 50 111 43 155 58" stroke="#43A46A" stroke-width="2.4" stroke-linecap="round"/>
+  <path d="M29 98C66 70 108 64 148 74" stroke="#F2B84B" stroke-width="2.4" stroke-linecap="round"/>
+  <text x="174" y="58" fill="#11222B" font-family="Arial, Helvetica, sans-serif" font-size="42" font-weight="800" letter-spacing="5">APOLLO</text>
+</svg>

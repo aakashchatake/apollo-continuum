@@ -1,0 +1,11 @@
+# This public repository intentionally contains only the static public site.
+# Local research, source evidence and deployment experiments remain private.
+*
+!.gitignore
+!README.md
+!.github/
+!.github/workflows/
+!.github/workflows/deploy-pages.yml
+!02_WEBSITE/
+!02_WEBSITE/**
+.DS_Store

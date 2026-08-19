@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 156 98" role="img" aria-label="Apollo">
+  <g fill="none" stroke-linecap="round">
+    <circle cx="55" cy="49" r="27" stroke="#142b40" stroke-width="2"/>
+    <path d="M37 39a25 25 0 0 1 39 23a25 25 0 0 1-39-23Z" fill="#efb141" stroke="none"/>
+    <path d="M8 72C43 33 99 29 148 48" stroke="#087d9b" stroke-width="2.6"/>
+    <path d="M15 79C52 45 101 43 145 59" stroke="#2c9e92" stroke-width="2.2"/>
+    <path d="M30 83C61 61 105 58 137 68" stroke="#edb644" stroke-width="1.8"/>
+  </g>
+</svg>
