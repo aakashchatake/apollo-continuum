@@ -2,71 +2,65 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Apollo AgriVerse - Intelligent Soil MVP</title>
-  <style>
-    :root { --ink:#143126; --muted:#5d766b; --line:#cbd8ce; --paper:#f7faf6; --panel:#ffffff; --green:#39784c; --lime:#86a94f; --water:#187d9c; --soil:#a75a24; --sun:#d99824; }
-    * { box-sizing:border-box; }
-    body { margin:0; background:var(--paper); color:var(--ink); font-family:Arial,Helvetica,sans-serif; }
-    header { height:74px; display:flex; align-items:center; justify-content:space-between; padding:0 34px; border-bottom:1px solid var(--line); background:#fff; }
-    .brand { display:flex; align-items:baseline; gap:12px; font-weight:700; }
-    .brand strong { font-size:20px; letter-spacing:1.3px; } .brand span { color:var(--green); font-size:14px; letter-spacing:.7px; }
-    .status { font-size:13px; color:#355c44; border-left:4px solid var(--sun); padding-left:10px; }
-    main { max-width:1420px; margin:0 auto; padding:28px 34px 44px; }
-    .heading { display:flex; justify-content:space-between; align-items:end; gap:24px; margin-bottom:30px; }
-    .eyebrow { color:var(--green); font-size:12px; letter-spacing:1.4px; font-weight:700; } h1 { margin:8px 0 0; font-size:34px; line-height:1.1; letter-spacing:0; } .heading p { max-width:480px; margin:0; color:var(--muted); line-height:1.4; font-size:15px; }
-    .layout { display:grid; grid-template-columns:330px minmax(0,1fr); gap:26px; }
-    .control-panel { padding-right:26px; border-right:1px solid var(--line); }
-    .section-label { color:var(--muted); font-size:12px; font-weight:700; letter-spacing:1px; margin:0 0 18px; }
-    label { display:block; margin:0 0 18px; font-size:14px; font-weight:700; } select,input { width:100%; margin-top:8px; border:1px solid #aebfb1; color:var(--ink); background:#fff; border-radius:4px; padding:10px; font:inherit; font-weight:400; } input[type=range] { padding:0; accent-color:var(--green); }
-    .range-value { float:right; color:var(--green); font-weight:700; } button { width:100%; border:0; border-radius:4px; background:var(--ink); color:#fff; padding:13px; cursor:pointer; font:700 14px Arial,Helvetica,sans-serif; letter-spacing:.2px; } button:hover { background:var(--green); }
-    .note { margin-top:26px; padding:15px 0 0 14px; border-left:4px solid var(--sun); color:var(--muted); font-size:13px; line-height:1.45; }
-    .workspace { min-width:0; } .summary { display:grid; grid-template-columns:1.2fr 1fr 1fr 1fr; border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
-    .metric { padding:16px 18px; border-right:1px solid var(--line); min-height:96px; } .metric:last-child { border-right:0; } .metric span { display:block; color:var(--muted); font-size:12px; letter-spacing:.7px; text-transform:uppercase; } .metric strong { display:block; margin-top:8px; font-size:23px; line-height:1.1; } .action strong { color:var(--soil); }
-    .chart-wrap { margin-top:26px; min-height:390px; background:#fff; border:1px solid var(--line); padding:20px 22px 12px; } .chart-head { display:flex; justify-content:space-between; align-items:baseline; gap:20px; } .chart-head h2 { margin:0; font-size:20px; } .chart-head span { color:var(--muted); font-size:12px; } canvas { width:100%; height:315px; display:block; margin-top:12px; }
-    .explanation { margin-top:26px; display:grid; grid-template-columns:1.15fr 1fr; gap:26px; border-top:1px solid var(--line); padding-top:22px; } .explanation h2 { margin:0 0 10px; font-size:20px; } .explanation p { margin:0; color:#3c5c4b; font-size:15px; line-height:1.48; } .assumptions { padding-left:22px; border-left:4px solid #82a96f; }
-    .legend { display:flex; gap:16px; flex-wrap:wrap; margin-top:9px; font-size:12px; color:#456153; } .legend i { display:inline-block; width:9px; height:9px; margin-right:5px; } .legend .control { background:var(--soil); }.legend .hydrogel { background:var(--water); }.legend .biochar { background:var(--lime); }.legend .combined { background:var(--green); }
-    footer { max-width:1420px; margin:0 auto; padding:0 34px 26px; color:var(--muted); font-size:12px; }
-    @media (max-width:900px) { header { padding:0 18px; }.status { display:none; } main { padding:24px 18px 34px; }.heading { display:block; }.heading p { margin-top:16px; }.layout { grid-template-columns:1fr; }.control-panel { padding:0 0 24px; border:0; border-bottom:1px solid var(--line); }.summary { grid-template-columns:1fr 1fr; }.metric:nth-child(2) { border-right:0; }.metric:nth-child(-n+2) { border-bottom:1px solid var(--line); }.explanation { grid-template-columns:1fr; }.assumptions { padding:16px 0 0; border-left:0; border-top:4px solid #82a96f; } footer { padding:0 18px 26px; } }
-  </style>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="A transparent, browser-based Intelligent Soil decision-support MVP comparing control, hydrogel, biochar and combined root-zone scenarios.">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <link rel="canonical" href="https://apollocontinuum.com/sih/mvp/">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon-32x32.png?v=20260820-1">
+  <link rel="icon" type="image/svg+xml" href="../../assets/apollo-app-icon.svg?v=20260820-1">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../assets/apple-touch-icon.png?v=20260820-1">
+  <meta name="theme-color" content="#f5f7f2">
+  <link rel="stylesheet" href="../../assets/intelligent-soil-mvp.css?v=20260820-1">
+  <title>Intelligent Soil MVP | Apollo Continuum</title>
 </head>
 <body>
-  <header><a class="brand" href="../../sih/" aria-label="Return to Apollo SIH hub"><strong>APOLLO</strong><span>AGRIVERSE / INTELLIGENT SOIL</span></a><div class="status">SIH MVP - simulated decision-support prototype</div></header>
+  <header class="app-header">
+    <a class="brand" href="../../sih/" aria-label="Return to Apollo SIH hub"><img src="../../assets/apollo-wordmark.svg" alt="Apollo"><span>AgriVerse / Intelligent Soil</span></a>
+    <div class="header-actions"><span class="status"><i></i>Simulated MVP</span><button class="icon-button" id="theme" type="button" aria-label="Switch to night theme" title="Change theme">Night</button><a class="back-link" href="../../sih/">SIH hub</a></div>
+  </header>
+
   <main>
-    <div class="heading"><div><div class="eyebrow">ROOT-ZONE DECISION WORKBENCH</div><h1>Test the irrigation decision before the field trial.</h1></div><p>Choose a crop, soil, weather and treatment. The state engine compares modelled root-zone moisture trajectories and explains the recommended action.</p></div>
-    <div class="layout">
-      <aside class="control-panel"><p class="section-label">SCENARIO INPUTS</p>
-        <label>Demonstration crop<select id="crop"><option value="tomato">Tomato</option><option value="grape">Grape</option><option value="wheat">Wheat</option></select></label>
+    <section class="intro"><div><p class="eyebrow">ROOT-ZONE DECISION WORKBENCH / SIH 2026</p><h1>Test an irrigation decision before the field trial.</h1></div><p>Compare four soil-treatment paths through one explainable water-balance model. Every number is simulated and every assumption stays visible.</p></section>
+
+    <div class="app-layout">
+      <aside class="controls" aria-label="Simulation controls">
+        <div class="panel-heading"><div><p class="eyebrow">SCENARIO</p><h2>Field inputs</h2></div><button class="text-button" id="reset" type="button">Reset</button></div>
+        <div class="presets" aria-label="Scenario presets"><button type="button" data-preset="dry">Dry spell</button><button type="button" data-preset="balanced">Balanced</button><button type="button" data-preset="rain">Rain event</button></div>
+        <label>Crop<select id="crop"><option value="tomato">Tomato</option><option value="grape">Grape</option><option value="wheat">Wheat</option><option value="sugarcane">Sugarcane</option></select></label>
         <label>Soil profile<select id="soil"><option value="loam">Loam</option><option value="black">Black cotton soil</option><option value="sandy">Sandy loam</option></select></label>
         <label>Weather scenario<select id="weather"><option value="heat">Heat wave / dry spell</option><option value="normal">Normal week</option><option value="rain">Rainfall event</option></select></label>
-        <label>Initial root-zone moisture <span class="range-value" id="moistureValue">64%</span><input id="moisture" type="range" min="35" max="82" value="64"></label>
-        <label>Base irrigation pulse <span class="range-value" id="irrigationValue">10 mm</span><input id="irrigation" type="range" min="0" max="24" value="10"></label>
-        <button id="run">Run 14-day simulation</button>
-        <div class="note"><strong>Scope:</strong> this MVP models a transparent water balance. It is not a chemical formulation model, a field-validation result or an autonomous irrigation controller.</div>
+        <fieldset><legend>Decision focus</legend><div class="segmented" id="treatment"><label><input type="radio" name="treatment" value="control"><span>Control</span></label><label><input type="radio" name="treatment" value="hydrogel" checked><span>Hydrogel</span></label><label><input type="radio" name="treatment" value="biochar"><span>Biochar</span></label><label><input type="radio" name="treatment" value="combined"><span>Combined</span></label></div></fieldset>
+        <label>Initial root-zone moisture <output id="moistureValue">64%</output><input id="moisture" type="range" min="35" max="82" value="64"></label>
+        <label>Planned irrigation pulse <output id="irrigationValue">10 mm</output><input id="irrigation" type="range" min="0" max="24" value="10"></label>
+        <label>Modelled plot area <output id="areaValue">1,000 m2</output><input id="area" type="range" min="100" max="5000" step="100" value="1000"></label>
+        <button class="run-button" id="run" type="button">Run 14-day simulation</button>
+        <p class="scope"><strong>Boundary:</strong> decision-support simulation only. It is not field validation, a chemical formulation model, or an autonomous irrigation controller.</p>
       </aside>
-      <section class="workspace">
-        <div class="summary"><div class="metric action"><span>Recommended action</span><strong id="action">Partial irrigation</strong></div><div class="metric"><span>Lowest moisture</span><strong id="lowest">42%</strong></div><div class="metric"><span>Stress risk</span><strong id="risk">Medium</strong></div><div class="metric"><span>Confidence</span><strong id="confidence">Modelled</strong></div></div>
-        <div class="chart-wrap"><div class="chart-head"><h2>Root-zone moisture: treatment comparison</h2><span>14-day simulated trajectory</span></div><canvas id="chart" aria-label="Treatment comparison chart"></canvas><div class="legend"><span><i class="control"></i>Control</span><span><i class="hydrogel"></i>Hydrogel</span><span><i class="biochar"></i>Biochar</span><span><i class="combined"></i>Hydrogel + biochar</span></div></div>
-        <div class="explanation"><div><h2 id="whyTitle">Why partial irrigation?</h2><p id="whyText">The control trajectory reaches the caution zone first. Hydrogel creates a finite root-zone water buffer, so the system proposes a smaller timed cycle rather than a full fixed schedule.</p></div><div class="assumptions"><h2>Model assumptions</h2><p id="assumptionText">Hydrogel stores only part of the base irrigation pulse and releases it when moisture falls. Biochar modifies water-loss behaviour; it is not treated as the same material. Results require calibration against controlled plots.</p></div></div>
+
+      <section class="workspace" aria-live="polite">
+        <div class="summary">
+          <article class="metric action"><span>Recommended action</span><strong id="action">Calculating</strong><small id="actionDetail">Selected treatment</small></article>
+          <article class="metric"><span>Lowest moisture</span><strong id="lowest">--</strong><small id="threshold">Crop threshold --</small></article>
+          <article class="metric"><span>Stress exposure</span><strong id="stressDays">--</strong><small>Days below threshold</small></article>
+          <article class="metric"><span>Water opportunity</span><strong id="waterSaved">--</strong><small id="waterDetail">Against control</small></article>
+          <article class="metric"><span>Evidence status</span><strong>Modelled</strong><small>Field calibration pending</small></article>
+        </div>
+
+        <section class="chart-panel"><div class="chart-head"><div><p class="eyebrow">TREATMENT COMPARISON</p><h2>Root-zone moisture trajectory</h2></div><span>Day 0-14 / simulated percentage</span></div><canvas id="chart" aria-label="Four-treatment root-zone moisture chart"></canvas><div class="legend"><span><i class="control"></i>Control</span><span><i class="hydrogel"></i>Hydrogel</span><span><i class="biochar"></i>Biochar</span><span><i class="combined"></i>Hydrogel + biochar</span><span><i class="threshold"></i>Crop stress threshold</span></div></section>
+
+        <section class="decision-grid">
+          <article class="decision-card"><p class="eyebrow">DECISION</p><h2 id="whyTitle">Recommendation</h2><p id="whyText"></p><div class="decision-numbers"><div><span>Suggested pulse</span><strong id="suggestedPulse">--</strong></div><div><span>Decision day</span><strong id="decisionDay">--</strong></div></div></article>
+          <article class="inspector"><div class="inspector-head"><div><p class="eyebrow">DAY INSPECTOR</p><h2 id="dayTitle">Day 7</h2></div><output id="weatherReadout">--</output></div><input id="day" type="range" min="0" max="14" value="7"><div class="day-values" id="dayValues"></div></article>
+        </section>
+
+        <section class="comparison-panel"><div class="chart-head"><div><p class="eyebrow">COMPARATIVE READOUT</p><h2>What changes between treatments</h2></div><span>Same crop, soil, weather and irrigation input</span></div><div class="table-wrap"><table><thead><tr><th>Treatment</th><th>Lowest moisture</th><th>Stress days</th><th>Stored water day 14</th><th>Status</th></tr></thead><tbody id="comparisonRows"></tbody></table></div></section>
+
+        <section class="explanation"><article><p class="eyebrow">MODEL LOGIC</p><h2>Transparent by design.</h2><p id="assumptionText"></p></article><article class="method"><p class="eyebrow">MATERIAL DISTINCTION</p><h2>Hydrogel is not biochar.</h2><p>Hydrogel is represented as a finite water store that releases below a moisture trigger. Biochar is represented as a moderated loss factor. The combined path applies both effects, but makes no claim of proven synergy.</p></article></section>
       </section>
     </div>
   </main>
-  <footer>Chatake Innoworks Private Limited | Apollo AgriVerse | D Y Patil SIH 2026 work package</footer>
-  <script>
-    const $ = (id) => document.getElementById(id);
-    const colors = { control:'#a75a24', hydrogel:'#187d9c', biochar:'#86a94f', combined:'#39784c' };
-    const profiles = { loam:{loss:1.0}, black:{loss:.78}, sandy:{loss:1.26} };
-    const crops = { tomato:1.0, grape:.88, wheat:.74 };
-    function read() { return { crop:$('crop').value, soil:$('soil').value, weather:$('weather').value, moisture:Number($('moisture').value), irrigation:Number($('irrigation').value) }; }
-    function weatherFor(kind, day) { if (kind === 'heat') return {demand:4.1, rain:day === 0 ? 0 : 0}; if (kind === 'rain') return {demand:2.1, rain:day === 3 ? 17 : day === 8 ? 6 : 0}; return {demand:2.8, rain:day === 5 ? 7 : 0}; }
-    function simulate(type, input) {
-      const out=[input.moisture], props={control:{capacity:0,release:0,loss:1},hydrogel:{capacity:16,release:2.0,loss:1},biochar:{capacity:0,release:0,loss:.82},combined:{capacity:16,release:2.3,loss:.78}}[type];
-      let moisture=input.moisture, store=Math.min(props.capacity, input.irrigation*.72);
-      for(let day=1;day<=14;day++){ const w=weatherFor(input.weather,day); const demand=w.demand*crops[input.crop]*profiles[input.soil].loss*props.loss; if(w.rain>0 && props.capacity){ const absorbed=Math.min(props.capacity-store,w.rain*.36); store+=absorbed; moisture+=w.rain-absorbed; } if(moisture<61 && store>0){ const release=Math.min(props.release,store); store-=release; moisture+=release; } if(day===1) moisture+=input.irrigation-store; moisture=Math.max(10,Math.min(92,moisture-demand)); out.push(moisture); } return out;
-    }
-    function draw(series) { const canvas=$('chart'), rect=canvas.getBoundingClientRect(), dpr=window.devicePixelRatio||1; canvas.width=rect.width*dpr; canvas.height=rect.height*dpr; const c=canvas.getContext('2d'); c.scale(dpr,dpr); const w=rect.width,h=rect.height,p={l:44,r:18,t:16,b:34}; const x=(i)=>p.l+(w-p.l-p.r)*(i/14), y=(v)=>p.t+(h-p.t-p.b)*(1-(v-10)/82); c.clearRect(0,0,w,h); c.font='12px Arial'; c.fillStyle='#5d766b'; c.strokeStyle='#d9e4db'; c.lineWidth=1; [20,40,60,80].forEach(v=>{c.beginPath();c.moveTo(p.l,y(v));c.lineTo(w-p.r,y(v));c.stroke();c.fillText(v+'%',6,y(v)+4);}); [0,3,6,9,12,14].forEach(v=>{c.fillText('D'+v,x(v)-8,h-10);}); c.save();c.translate(13,h/2+18);c.rotate(-Math.PI/2);c.fillText('Root-zone moisture',0,0);c.restore(); Object.entries(series).forEach(([name,data])=>{c.strokeStyle=colors[name];c.lineWidth=3; c.beginPath(); data.forEach((v,i)=>{if(i===0)c.moveTo(x(i),y(v));else c.lineTo(x(i),y(v));});c.stroke();}); }
-    function update(){ const input=read(); const series={control:simulate('control',input),hydrogel:simulate('hydrogel',input),biochar:simulate('biochar',input),combined:simulate('combined',input)}; draw(series); const lowest=Math.min(...series.control); const risk=lowest<32?'High':lowest<48?'Medium':'Low'; const action=lowest<32?'Irrigate now':lowest<48?'Partial irrigation':'Delay irrigation'; $('action').textContent=action; $('lowest').textContent=Math.round(lowest)+'%'; $('risk').textContent=risk; $('confidence').textContent='Modelled'; $('whyTitle').textContent='Why '+action.toLowerCase()+'?'; const comparison=Math.round(Math.min(...series.hydrogel)-lowest); $('whyText').textContent=action==='Irrigate now'?'The control plot enters the stress zone under the selected scenario. The recommendation is immediate irrigation, while the comparison curves show how an amendment may change the timing - not remove the need for water.':'The control trajectory reaches the caution zone first. The hydrogel scenario retains a finite buffer of about '+Math.max(0,comparison)+' moisture points at its lowest point, so the model recommends a smaller timed cycle rather than a fixed full schedule.'; $('assumptionText').textContent='For '+$('crop').selectedOptions[0].text+' in '+$('soil').selectedOptions[0].text+', demand changes with the '+$('weather').selectedOptions[0].text.toLowerCase()+'. Hydrogel storage is capped; biochar modifies loss behaviour. Field measurements are required before a farmer-facing recommendation.'; }
-    ['crop','soil','weather','moisture','irrigation'].forEach(id=>$(id).addEventListener('input',()=>{ $('moistureValue').textContent=$('moisture').value+'%'; $('irrigationValue').textContent=$('irrigation').value+' mm'; update(); })); $('run').addEventListener('click',update); window.addEventListener('resize',update); update();
-  </script>
+
+  <footer><span>Chatake Innoworks Private Limited / GreenWorks / Apollo AgriVerse</span><span>RAIT, D Y Patil University / SIH 2026 student work package</span></footer>
+  <script src="../../assets/intelligent-soil-mvp.js?v=20260820-1"></script>
 </body>
 </html>
