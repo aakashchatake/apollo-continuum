@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Apollo Continuum - One first dream. Many futures.">
+  <rect width="1200" height="630" fill="#f5f1e8"/>
+  <rect width="18" height="630" fill="#10233b"/><rect x="18" width="6" height="630" fill="#efb141"/>
+  <g transform="translate(76 58) scale(.82)">
+    <circle cx="55" cy="49" r="28" fill="#f2b84b"/>
+    <path fill="#10233b" fill-rule="evenodd" d="M55 16a33 33 0 1 1 0 66 33 33 0 0 1 0-66Zm0 3a30 30 0 1 0 0 60 30 30 0 0 0 0-60Z"/>
+    <path d="M8 72C43 33 99 29 148 48l-1 4C99 35 47 39 11 76Z" fill="#166b8f"/>
+    <path d="M15 79C52 45 101 43 145 59l-1 4C101 49 55 51 18 83Z" fill="#43a46a"/>
+    <path d="M30 83C61 61 105 58 137 68l-1 3c-31-8-73-5-104 15Z" fill="#f2b84b"/>
+  </g>
+  <text x="216" y="116" font-family="Arial, Helvetica, sans-serif" font-size="42" font-weight="800" fill="#10233b">APOLLO</text>
+  <text x="420" y="116" font-family="Arial, Helvetica, sans-serif" font-size="42" font-weight="700" fill="#c75335">CONTINUUM</text>
+  <text x="76" y="255" font-family="Georgia, Times New Roman, serif" font-size="76" fill="#10233b">One first dream.</text>
+  <text x="76" y="337" font-family="Georgia, Times New Roman, serif" font-size="76" font-style="italic" fill="#3b7659">Many futures.</text>
+  <text x="80" y="405" font-family="Arial, Helvetica, sans-serif" font-size="25" fill="#586573">Foundation, research, intelligent worlds, robotics, publishing and production.</text>
+  <g transform="translate(80 476)">
+    <rect width="1040" height="2" fill="#c9d2d7"/>
+    <g font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" letter-spacing="1" fill="#10233b">
+      <circle cx="0" cy="1" r="8" fill="#c75335"/><text x="0" y="45">FOUNDATION</text>
+      <circle cx="232" cy="1" r="8" fill="#efb141"/><text x="232" y="45">RESEARCH</text>
+      <circle cx="449" cy="1" r="8" fill="#3b7659"/><text x="449" y="45">AGRIVERSE</text>
+      <circle cx="681" cy="1" r="8" fill="#166b8f"/><text x="681" y="45">ROBOTICS</text>
+      <circle cx="892" cy="1" r="8" fill="#c75335"/><text x="892" y="45">PRODUCTION</text>
+    </g>
+  </g>
+  <text x="80" y="589" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" letter-spacing="1" fill="#586573">APOLLOCONTINUUM.COM</text>
+  <rect x="902" y="560" width="218" height="3" fill="#efb141"/>
+</svg>
