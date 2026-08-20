@@ -5,6 +5,7 @@
     '02_ROLES_AND_WEEKLY_PLAN.md': 'Roles and weekly plan',
     '03_SCOPE_AND_APOLLO_HANDOFF_BOUNDARY.md': 'Scope and Apollo boundary',
     '04_WORKFLOW_REVIEW_AND_DEMO_SCRIPT.md': 'Workflow and demo script',
+    '05_ROLE_AND_COORDINATION_CHANGELOG_20260820.md': 'Role and coordination update',
   };
   const requested = new URLSearchParams(window.location.search).get('doc');
   const current = Object.hasOwn(documents, requested) ? requested : 'README.md';

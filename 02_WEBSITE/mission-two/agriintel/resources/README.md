@@ -16,6 +16,16 @@ The team is building one coherent, reviewable vertical slice: structured field i
 - `02_ROLES_AND_WEEKLY_PLAN.md`: four-member ownership plan and definition of done.
 - `03_SCOPE_AND_APOLLO_HANDOFF_BOUNDARY.md`: the boundary between the internship build, Intelligent Soil MVP and long-term Apollo work.
 - `04_WORKFLOW_REVIEW_AND_DEMO_SCRIPT.md`: Git workflow, review gates, demo narrative and checklist.
+- `05_ROLE_AND_COORDINATION_CHANGELOG_20260820.md`: current role allocation and shared-work record.
+
+## Current Coordination Model
+
+- **Nandini** owns product direction, data quality and data mining.
+- **Vijayalaxmi** owns technical integration.
+- **Sunaina** owns the ML baseline and model evaluation.
+- **Dakshini** owns the data and ML-model frontend, including its component demonstration.
+- **Vijayalaxmi and Sunaina** jointly lead the complete project demonstration, story and final presentation flow.
+- **Nandini, Sunaina and Vijayalaxmi** jointly execute Data Science and the ML Pipeline. Shared work requires named commits, review evidence and a clear integration owner for each release.
 
 ## Non-Negotiable Rules
 
